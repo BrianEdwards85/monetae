@@ -1,6 +1,6 @@
 # Monetae
 
-**TODO: Add description**
+**TODO: Description**
 
 ## Installation
 
