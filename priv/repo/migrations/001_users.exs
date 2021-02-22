@@ -7,7 +7,7 @@ defmodule Monetae.Repo.Migrations.Users do
       add :name, :text, null: false
       add :password, :text
       add :active, :boolean, null: false, default: true
-      add :created_by, references(:users, type: :uuid), null: false
+      add :created_by_id, references(:users, type: :uuid), null: false
       timestamps default: fragment("now()")
     end
 

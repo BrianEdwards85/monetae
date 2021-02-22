@@ -6,7 +6,7 @@ defmodule Monetae.Repo.Migrations.Accounts do
       add :id, :uuid, primary_key: true, default: fragment("uuid_generate_v4()")
       add :name, :text, null: false
       add :active, :boolean, null: false, default: true
-      add :created_by, references(:users, type: :uuid), null: false
+      add :created_by_id, references(:users, type: :uuid), null: false
       timestamps default: fragment("now()")
       add :balance, :bigint, null: false, default: 0
     end
@@ -15,7 +15,7 @@ defmodule Monetae.Repo.Migrations.Accounts do
       add :id, :uuid, primary_key: true, default: fragment("uuid_generate_v4()")
       add :description, :text, null: false
       add :effective_date, :naive_datetime, null: false, default: fragment("now()")
-      add :created_by, references(:users, type: :uuid), null: false
+      add :created_by_id, references(:users, type: :uuid), null: false
       timestamps default: fragment("now()")
     end
 
