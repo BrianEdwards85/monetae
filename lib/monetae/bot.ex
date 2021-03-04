@@ -1,5 +1,4 @@
 defmodule Monetae.Bot do
-
   use Plug.Router
 
   plug :match
